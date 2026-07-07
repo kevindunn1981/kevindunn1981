@@ -1,6 +1,15 @@
 # Summit — An Enterprise Business Launch Platform
 
-*Working name: **Summit**. Positioning: the anti-Polsia — a done-with-you platform that takes a founder from "I have an idea" to "I run a licensed, funded, incorporated, professionally represented business," not just "I have a webpage."*
+*Working name: **Summit**. Positioning: LegalZoom + Wix + Polsia, fused into one done-with-you platform that takes a founder from "I have an idea" to "I run a licensed, funded, incorporated, professionally represented business," not just "I have a webpage."*
+
+## 0. The Core Design Rule: Universal Foundation, Client-Determined Divergence
+
+Every business needs the same underlying scaffolding — an entity, a bank account, a domain, a professional site, the right licenses, a payment setup that fits how money actually moves, and a path to capital. **What diverges by business is only the surface**: the industry, the product, the licenses that apply, the payment pattern that fits. Summit never guesses at that surface and never bakes a business type into the platform's design.
+
+- The milestone tiers, the service stable, and the fee framework below are identical regardless of what the client is building — a bakery and a B2B software company walk the same pyramid.
+- The client's own answers (industry, jurisdiction, model) determine which specific license, which specific payment pattern, which specific tax registration applies *within* each universal tier. The platform surfaces the right sub-choices dynamically; it does not pre-select a vertical template.
+- A purpose-built **Site Build Agent** (Section 6) does the one thing Polsia does badly and Wix leaves entirely to the user: take the client's brand and content intake and produce a professional, correct, on-brand site in one well-executed pass — not a generic template, and not an endless back-and-forth.
+- If a client doesn't yet know what business to build, Summit does not default to suggesting a SaaS company or any other generic template idea. It runs the **Idea Discovery Protocol** (Section 8) — a question-driven conversation that surfaces a specific, novel idea suited to that person, only when they explicitly ask for it.
 
 ## 1. Why Summit beats Polsia
 
@@ -47,7 +56,9 @@ Each tier below is a milestone set with pass/fail exit criteria, not vague advic
 
 ---
 
-## 3. Milestone Checklist
+## 3. Universal Milestone Checklist
+
+Every item below applies to every business, regardless of industry. Where a tier has variable content (which license, which payment pattern), the checklist says so explicitly — the platform surfaces the client's own answers, it does not pre-fill an assumed vertical.
 
 ### Tier 0 — Discovery & Validation
 - [ ] Problem/market validation summary produced (target customer, pain point, willingness-to-pay signal)
@@ -227,7 +238,29 @@ Every row below is chosen because it has a real API/webhook surface an agent can
 
 ---
 
-## 5. Transparent Fee & Agent Processing Framework
+## 5. The Site Build Agent — Right the First Time
+
+This is the purpose-built agent that replaces both Polsia's generic template and Wix's "build it yourself" drag-and-drop. It does not guess at what the client wants and it does not ship a placeholder site to be iterated on forever — it runs one structured intake, then produces a finished, on-brand, professional build.
+
+### Intake (single pass, structured — not a guessing game)
+- [ ] Business name, brand assets already on file from Tier 0/2 (logo, colors, voice guide)
+- [ ] What the site needs to *do*: inform, capture leads, sell products, take bookings, process applications, serve content — client states this directly, agent does not infer it
+- [ ] Pages/sections required, in the client's own words
+- [ ] Real copy and real images provided by the client, or explicitly delegated to the agent to draft/source — never silently fabricated
+- [ ] Any must-have integrations (the payment pattern chosen in Tier 4, a booking system, a form target)
+- [ ] Accessibility and legal-page requirements pulled automatically from Tier 3 compliance status
+
+### Build discipline
+- [ ] One coherent design system generated from the brand kit — no stock template swapped in
+- [ ] Full site assembled and internally reviewed against the intake checklist *before* the client sees a first draft, so the first thing they see is correct, not a rough cut
+- [ ] Client review is a confirmation step, not a redesign session — if something is wrong it means the intake was incomplete, and the agent fixes the intake, not just the symptom
+- [ ] Site ships wired to the domain, email, and payment/commerce integrations already provisioned in earlier tiers — nothing left as a manual follow-up step for the client
+
+**Exit criteria:** the client's first look at the live site is also the last major revision — no watermark, no "you'll want to keep tweaking this," no third-party branding anywhere on it.
+
+---
+
+## 6. Transparent Fee & Agent Processing Framework
 
 The core promise: **the founder never gets a surprise charge, and never wonders what an agent just paid for on their behalf.**
 
@@ -266,11 +299,27 @@ Every agent operates under the same rule: **propose the spend, show the itemized
 
 ---
 
-## 6. What Makes This "One Stop Shop" Credible, Not Just Marketing
+## 7. Idea Discovery Protocol — Only On Explicit Request
+
+Summit never proposes what business someone should build. If a client already knows, Tier 0 starts directly from their description. This protocol only activates when a client explicitly asks for help coming up with an idea — and even then, it does not hand them a generic template (a SaaS tool, a dropshipping store, a subscription box) as a default. There are millions of underserved, unimplemented ideas; the job is to help a specific person find one that fits *them*, through questions, not through a suggestion engine.
+
+### The protocol is a conversation, not a generator
+1. **Draw out the person, not a market category.** What do they already know deeply — a trade, a hobby, a job, a community, a frustration they've lived with? What do people already come to them for advice about?
+2. **Surface unimplemented gaps, not trends.** Ask about problems they or people around them tolerate because "that's just how it is" — those are the ideas nobody has built yet, not the ones every generator suggests.
+3. **Pressure-test with real constraints**, one at a time and only as they become relevant: available capital, time, location, regulatory exposure, whether they want to be hands-on or build something they can staff.
+4. **Never default to a template category.** If the conversation stalls, the agent asks another question — it does not fall back to suggesting "an app for X" or "a SaaS for Y" as a safe default.
+5. **Converge on one specific, describable business**, in the client's own words, that they recognize as theirs — then hand that description into Tier 0 as the starting input for everything above.
+
+**Exit criteria:** a one- or two-sentence business description the client wrote or fully agrees with, specific enough to run a real name/domain/trademark clearance against — not a category, a concept.
+
+---
+
+## 8. What Makes This "One Stop Shop" Credible, Not Just Marketing
 
 The Polsia failure mode is stopping at "site is live." Summit's retention thesis is the opposite: once a founder has their entity, EIN, bank account, licenses, insurance, live payments, and an SBA application in flight — all inside one dashboard with one fee ledger — the switching cost to go rebuild that elsewhere is enormous, and there's no reason to. Completeness is the moat, not lock-in tricks.
 
-## 7. Suggested Next Steps
-1. Pick the first vertical to design the Tier 0–4 flow against concretely (e.g., a local service business vs. an e-commerce brand vs. a SaaS company) — the license/insurance/commerce steps differ enough that a single generic flow won't feel "professional."
+## 9. Suggested Next Steps
+1. Build the Tier 0–4 flow as one universal path with dynamically surfaced sub-choices (license type, payment pattern) driven entirely by the client's own answers — no vertical branching baked into the platform itself.
 2. Decide which 2-3 services per category in Section 4 are the *actual* v1 integrations (don't wire all of them at once) — recommend starting with: Cloudflare (domain/DNS/hosting), Stripe (Billing+Connect+Tax), Google Workspace (email), Northwest/Firstbase (formation), Plaid+Mercury (banking), grants.gov + SBA Lender Match (capital).
 3. Design the Fee Ledger and approval-gate UI before building agent execution — this is the trust layer the whole pitch depends on.
+4. Spec the Site Build Agent's intake schema (Section 5) so "first draft is the final draft" is actually achievable, not aspirational.
