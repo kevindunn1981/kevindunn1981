@@ -9,7 +9,7 @@ Every business needs the same underlying scaffolding — an entity, a bank accou
 - The milestone tiers, the service stable, and the fee framework below are identical regardless of what the client is building — a bakery and a B2B software company walk the same pyramid.
 - The client's own answers (industry, jurisdiction, model) determine which specific license, which specific payment pattern, which specific tax registration applies *within* each universal tier. The platform surfaces the right sub-choices dynamically; it does not pre-select a vertical template.
 - A purpose-built **Site Build Agent** (Section 6) does the one thing Polsia does badly and Wix leaves entirely to the user: take the client's brand and content intake and produce a professional, correct, on-brand site in one well-executed pass — not a generic template, and not an endless back-and-forth.
-- If a client doesn't yet know what business to build, Summit does not default to suggesting a SaaS company or any other generic template idea. It runs the **Idea Discovery Protocol** (Section 8) — a question-driven conversation that surfaces a specific, novel idea suited to that person, only when they explicitly ask for it.
+- The very first conversation a client has with Summit is the **Opportunity Interview** (Section 2) — it decides, honestly and early, whether we're wiring services around an existing business or discovering a novel one, and it never defaults to a generic template idea in either case.
 
 ## 1. Why Summit beats Polsia
 
@@ -27,7 +27,36 @@ The product thesis: **the website is the least valuable thing we build.** The va
 
 ---
 
-## 2. The Pyramid Model
+## 2. The Opportunity Interview — Day One, Not a Fallback
+
+This is the first thing that happens on Summit, before anything else — designed to feel like being interviewed for something worth wanting, not like filling out a form. The tone is attentive and genuinely curious about this specific person's shot at ownership. The conversation is the founder's first real step toward working for themselves, and it should feel like that from the opening question.
+
+### The first honest question
+Early and plainly: **"Are you bringing us a business that already exists, or are we building one from the ground up together?"** Everything downstream branches from the honest answer. Nothing is assumed before it's asked.
+
+### Path A — An existing business
+The interview is a listening exercise, not an intake form. The agent draws out the story: what they built, why, what's working, what's stuck, what they've been handling by hand that shouldn't need to be. Along the way it extracts exactly what Summit needs — legal status, brand assets already in hand, what's already licensed, what already sells — inside a conversation that feels like someone finally taking the business seriously. Nothing that already works gets rebuilt or second-guessed: Summit wires its services around what exists, closes the gaps, and gets out of the way of what's already right.
+
+### Path B — A business that doesn't exist yet
+Not having an idea yet is the normal starting point, not an edge case, so this path isn't gated behind an explicit request — it's simply where the conversation goes when Path A doesn't apply. Even here, Summit does not hand over a generic template (a SaaS tool, a dropshipping store, a subscription box); it helps this specific person find the idea that's already theirs, through questions:
+
+1. **Draw out the person, not a market category.** What do they already know deeply — a trade, a hobby, a job, a community, a frustration they've lived with? What do people already come to them for advice about?
+2. **Surface unimplemented gaps, not trends.** Ask about problems they or the people around them tolerate because "that's just how it is" — those are the ideas nobody has built yet, not the ones a suggestion engine reaches for.
+3. **Pressure-test with real constraints**, one at a time and only as they become relevant: available capital, time, location, regulatory exposure, hands-on vs. staffed.
+4. **Never default to a template category.** If the conversation stalls, the agent asks another question — it does not fall back to suggesting "an app for X" or "a SaaS for Y" as a safe default.
+5. **Converge on one specific, describable business**, in the client's own words, that they recognize as theirs.
+
+### Why the tone is the point
+Most people arrive doubting whether owning a business is actually available to them. This interview is the moment that gets answered — it should read less like onboarding copy and more like being told *yes, and here's exactly how.* That feeling is the product's first deliverable, before a single filing or dollar moves.
+
+### Convergence
+Both paths end at the same artifact: a concrete, one- or two-sentence business description — the client's own words for an existing business, or the idea surfaced in Path B — specific enough to run a real name/domain/trademark clearance against. That description becomes the literal input to Tier 0.
+
+**Exit criteria:** the client has stated, in their own words, either the existing business Summit is wiring services around or the novel business Summit just helped them discover — and they leave the interview sounding like a founder, not an applicant.
+
+---
+
+## 3. The Pyramid Model
 
 Summit organizes the entire founder journey as a pyramid. Each tier must be substantially complete before the next unlocks (soft gates, not hard blocks — an advanced user can skip ahead, but the agent will flag missing prerequisites, e.g. "you're about to accept payments but haven't formed an entity yet").
 
@@ -56,11 +85,12 @@ Each tier below is a milestone set with pass/fail exit criteria, not vague advic
 
 ---
 
-## 3. Universal Milestone Checklist
+## 4. Universal Milestone Checklist
 
 Every item below applies to every business, regardless of industry. Where a tier has variable content (which license, which payment pattern), the checklist says so explicitly — the platform surfaces the client's own answers, it does not pre-fill an assumed vertical.
 
 ### Tier 0 — Discovery & Validation
+- [ ] Opportunity Interview completed (Section 2) — existing-business intake or novel-idea discovery, converged on a concrete one- or two-sentence description
 - [ ] Problem/market validation summary produced (target customer, pain point, willingness-to-pay signal)
 - [ ] Competitive landscape scan
 - [ ] Business name generated, checked for: state entity-name availability, domain availability, USPTO trademark conflict (TESS knockout search), and matching social handles
@@ -150,7 +180,7 @@ Pick the pattern(s) that match the real business, not a default checkout button:
 
 ---
 
-## 4. The AI-Friendly Service Stable
+## 5. The AI-Friendly Service Stable
 
 Every row below is chosen because it has a real API/webhook surface an agent can drive end-to-end (submit, poll status, receive webhook, reconcile) — not a service that only works through a human clicking a dashboard.
 
@@ -238,7 +268,7 @@ Every row below is chosen because it has a real API/webhook surface an agent can
 
 ---
 
-## 5. The Site Build Agent — Right the First Time
+## 6. The Site Build Agent — Right the First Time
 
 This is the purpose-built agent that replaces both Polsia's generic template and Wix's "build it yourself" drag-and-drop. It does not guess at what the client wants and it does not ship a placeholder site to be iterated on forever — it runs one structured intake, then produces a finished, on-brand, professional build.
 
@@ -260,7 +290,7 @@ This is the purpose-built agent that replaces both Polsia's generic template and
 
 ---
 
-## 6. Transparent Fee & Agent Processing Framework
+## 7. Transparent Fee & Agent Processing Framework
 
 The core promise: **the founder never gets a surprise charge, and never wonders what an agent just paid for on their behalf.**
 
@@ -299,27 +329,13 @@ Every agent operates under the same rule: **propose the spend, show the itemized
 
 ---
 
-## 7. Idea Discovery Protocol — Only On Explicit Request
-
-Summit never proposes what business someone should build. If a client already knows, Tier 0 starts directly from their description. This protocol only activates when a client explicitly asks for help coming up with an idea — and even then, it does not hand them a generic template (a SaaS tool, a dropshipping store, a subscription box) as a default. There are millions of underserved, unimplemented ideas; the job is to help a specific person find one that fits *them*, through questions, not through a suggestion engine.
-
-### The protocol is a conversation, not a generator
-1. **Draw out the person, not a market category.** What do they already know deeply — a trade, a hobby, a job, a community, a frustration they've lived with? What do people already come to them for advice about?
-2. **Surface unimplemented gaps, not trends.** Ask about problems they or people around them tolerate because "that's just how it is" — those are the ideas nobody has built yet, not the ones every generator suggests.
-3. **Pressure-test with real constraints**, one at a time and only as they become relevant: available capital, time, location, regulatory exposure, whether they want to be hands-on or build something they can staff.
-4. **Never default to a template category.** If the conversation stalls, the agent asks another question — it does not fall back to suggesting "an app for X" or "a SaaS for Y" as a safe default.
-5. **Converge on one specific, describable business**, in the client's own words, that they recognize as theirs — then hand that description into Tier 0 as the starting input for everything above.
-
-**Exit criteria:** a one- or two-sentence business description the client wrote or fully agrees with, specific enough to run a real name/domain/trademark clearance against — not a category, a concept.
-
----
-
 ## 8. What Makes This "One Stop Shop" Credible, Not Just Marketing
 
 The Polsia failure mode is stopping at "site is live." Summit's retention thesis is the opposite: once a founder has their entity, EIN, bank account, licenses, insurance, live payments, and an SBA application in flight — all inside one dashboard with one fee ledger — the switching cost to go rebuild that elsewhere is enormous, and there's no reason to. Completeness is the moat, not lock-in tricks.
 
 ## 9. Suggested Next Steps
-1. Build the Tier 0–4 flow as one universal path with dynamically surfaced sub-choices (license type, payment pattern) driven entirely by the client's own answers — no vertical branching baked into the platform itself.
-2. Decide which 2-3 services per category in Section 4 are the *actual* v1 integrations (don't wire all of them at once) — recommend starting with: Cloudflare (domain/DNS/hosting), Stripe (Billing+Connect+Tax), Google Workspace (email), Northwest/Firstbase (formation), Plaid+Mercury (banking), grants.gov + SBA Lender Match (capital).
-3. Design the Fee Ledger and approval-gate UI before building agent execution — this is the trust layer the whole pitch depends on.
-4. Spec the Site Build Agent's intake schema (Section 5) so "first draft is the final draft" is actually achievable, not aspirational.
+1. Script the Opportunity Interview (Section 2) first — the question tree for both paths, and the handoff format that feeds Tier 0 — since every other tier depends on what it produces.
+2. Build the Tier 0–4 flow as one universal path with dynamically surfaced sub-choices (license type, payment pattern) driven entirely by the client's own answers — no vertical branching baked into the platform itself.
+3. Decide which 2-3 services per category in Section 5 are the *actual* v1 integrations (don't wire all of them at once) — recommend starting with: Cloudflare (domain/DNS/hosting), Stripe (Billing+Connect+Tax), Google Workspace (email), Northwest/Firstbase (formation), Plaid+Mercury (banking), grants.gov + SBA Lender Match (capital).
+4. Design the Fee Ledger and approval-gate UI before building agent execution — this is the trust layer the whole pitch depends on.
+5. Spec the Site Build Agent's intake schema (Section 6) so "first draft is the final draft" is actually achievable, not aspirational.
