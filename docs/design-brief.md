@@ -86,6 +86,15 @@ puzzle meta-game and the generative art.
   (merging coplanar faces) or a fixed low-poly "cube-marching" pass at
   unlock time (bake mesh once, cache it, treat as a static asset from
   then on) keeps runtime cost equivalent to any other 3D game asset.
+- **Storage format decision** (see `voxel-format-research.md` for full
+  survey): generate into a dense scratch grid, hold each growing
+  specimen in a **bricked sparse grid** (small dense bricks, palette-
+  indexed, allocated only where occupied — the same family of structure
+  as OpenVDB/NanoVDB and Teardown-style engines), bake to a greedy-meshed
+  triangle mesh once finalized, and use a MagicaVoxel-style flat sparse
+  list only as the authoring/interchange/save format. Full sparse voxel
+  octrees/DAGs are overkill here — those solve planet/city-scale static
+  worlds, not room-scale unique specimens.
 
 ## 6. Non-Procedural Systems (well-understood, lower risk)
 
