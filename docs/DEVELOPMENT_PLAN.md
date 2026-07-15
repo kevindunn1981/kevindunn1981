@@ -1,13 +1,14 @@
-# VOIDGRAFT — Development Plan
+# VoidGraft — Development Plan
 
 All requirements trace to [`ORIGINAL_BRIEF.md`](ORIGINAL_BRIEF.md) (the owner's verbatim
-brief). This document tracks how each requirement is met and what comes next.
+brief); later owner directives are logged verbatim in [`DECISIONS.md`](DECISIONS.md).
+This document tracks how each requirement is met and what comes next.
 
 ## Name
 
-**VOIDGRAFT** (assigned per the brief's "TBA or assigned by you"). You destroy the
-void's tentacles and *graft* their parts onto your own ship. Easy to rename —
-it appears only in `project.godot`, the menu title, and docs.
+**VoidGraft** — assigned per the brief's "TBA or assigned by you", **confirmed by the
+owner** (Directive 2). You destroy the void's tentacles and *graft* their parts onto
+your own ship. Stylized VOIDGRAFT on the title screen.
 
 ## Engine / target
 
@@ -61,18 +62,28 @@ Combat uses simple distance checks against tentacle spline sample points
 - Tentacle length `15 + 1.8/wave` (cap 34), HP `16 + 7/wave`, alive cap `2 + wave` (max 11).
 - Player: 100 HP, 8 graft slots; extra parts → +25 score and small heal.
 
+## Touch layout rule (Directive 2)
+
+The on-screen joystick lives on the **left** (left 46% of the screen). The **right
+side — especially the lower-right — is reserved** for the planned full **SNES-style
+control pad** (A/B/X/Y cluster, and shoulder-button zones at the top corners if we
+add L/R). No HUD element may claim the lower-right touch zone.
+
 ## Status
 
-- [x] v0.1 — playable core loop (this commit). *Not yet run in the Godot editor — needs a first playtest.*
-- [ ] v0.2 — playtest & tune: difficulty curve, joystick feel, camera height, glow strength on real hardware
+- [x] v0.1 — playable core loop. *Not yet run in the Godot editor — needs a first playtest.*
+- [x] v0.1.1 — owner decisions applied: name **VoidGraft**, landscape confirmed, Android
+      export preset (`export_presets.cfg`, arm64, immersive landscape), lower-right HUD
+      zone cleared for the future pad
+- [ ] repo move — push to dedicated `kevindunn1981/voidgraft` once the owner creates it
+      (Claude's GitHub integration cannot create repositories)
+- [ ] v0.2 — playtest & tune on Android: difficulty curve, joystick feel, camera height, glow strength on real hardware
 - [ ] v0.3 — audio (procedural/synth SFX + music), haptics on hit
 - [ ] v0.4 — juice: tentacle hit reactions, score popups, combo multiplier, screen-space damage vignette
-- [ ] v0.5 — Android export preset (+ iOS later), icon/splash, performance pass on-device
-- [ ] v1.0 — store polish: settings (sensitivity, shake toggle), pause-on-focus-loss, privacy page
+- [ ] v0.5 — SNES-style on-screen control pad (D-pad option on the left, A/B/X/Y on the right), mappable to game actions as they grow
+- [ ] v1.0 — store polish: settings (sensitivity, shake toggle), pause-on-focus-loss, icon/splash, privacy page
 
-## Open questions for the owner
+## Resolved questions
 
-1. Name **VOIDGRAFT** — keep, or rename?
-2. This is your GitHub *profile* repo (`kevindunn1981/kevindunn1981`) — its README is your public profile page. Move the game to a dedicated repo (e.g. `kevindunn1981/voidgraft`)?
-3. Landscape orientation assumed — confirm (portrait is possible but changes joystick/HUD layout).
-4. Which phone(s) will you test on? (Android export first?)
+All four v0.1 open questions were answered by Directive 2 (see `DECISIONS.md`):
+name kept, dedicated repo approved, landscape confirmed, Android first.

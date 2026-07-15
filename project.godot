@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="VOIDGRAFT"
+config/name="VoidGraft"
 config/description="Top-down 3D mobile space survival. Pilot a ship with an on-screen joystick, shoot the spline tentacles attacking from off screen, and graft their broken parts onto your hull as laser-firing tentacles of your own."
 run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.4")

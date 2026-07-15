@@ -1,6 +1,7 @@
-# VOIDGRAFT
+# VoidGraft
 
-A top-down 3D mobile arcade game built in **Godot 4.4+**. Pilot a lone ship with an
+A top-down 3D mobile arcade game built in **Godot 4.4+**, targeting **Android**
+(landscape). Pilot a lone ship with an
 on-screen joystick while spline-animated tentacles wave, swing and swirl in from off
 screen. Shoot them down with your turret — every kill breaks apart and the pieces fly
 back and **graft onto your hull as laser-firing tentacles of your own**. Survive the
@@ -10,12 +11,14 @@ Every model, effect and UI element is procedurally constructed from splines,
 primitives and parabolic curves — there are zero imported art assets.
 
 > The founding design brief is recorded verbatim in
-> [`docs/ORIGINAL_BRIEF.md`](docs/ORIGINAL_BRIEF.md).
+> [`docs/ORIGINAL_BRIEF.md`](docs/ORIGINAL_BRIEF.md), and all later owner
+> directives verbatim in [`docs/DECISIONS.md`](docs/DECISIONS.md).
 > The roadmap and requirement-to-code map live in
 > [`docs/DEVELOPMENT_PLAN.md`](docs/DEVELOPMENT_PLAN.md).
 
 *(This file is `GAME_README.md` because `README.md` in this repository is the
-GitHub profile page.)*
+GitHub profile page. The game is moving to the dedicated `kevindunn1981/voidgraft`
+repository, where this file becomes `README.md`.)*
 
 ## Run it
 

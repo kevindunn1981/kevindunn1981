@@ -143,13 +143,11 @@ func _build_hud() -> void:
 	_wave_label.offset_top = 18
 	_hud.add_child(_wave_label)
 
-	_tentacle_label = _make_label("GRAFTS 0/8", 22, CYAN)
-	_tentacle_label.set_anchors_preset(Control.PRESET_BOTTOM_RIGHT)
-	_tentacle_label.offset_left = -260
-	_tentacle_label.offset_right = -24
-	_tentacle_label.offset_top = -60
-	_tentacle_label.offset_bottom = -20
-	_hud.add_child(_tentacle_label)
+	# Lower-right screen space stays free: it is reserved for the future
+	# SNES-style button pad (see docs/DECISIONS.md, directive 2).
+	_tentacle_label = _make_label("GRAFTS 0/8", 20, CYAN)
+	_tentacle_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
+	top_left.add_child(_tentacle_label)
 
 	var pause_btn := _make_button("II", 26)
 	pause_btn.custom_minimum_size = Vector2(64, 64)
