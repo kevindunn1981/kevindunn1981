@@ -386,7 +386,46 @@ cluttered space.
   budget. Simple per-room occlusion (render only the current room plus
   immediately adjacent ones) is enough; no streaming/LOD system needed.
 
-## 15. Recommended Next Step
+## 15. Currency System: Dew & Amber
+
+A two-tier currency — one earnable, one purchase-only — matching the
+classic soft/hard-currency free-to-play pattern, but themed and rendered
+to fit the rest of the game rather than generic coin/gem iconography.
+This sits alongside **DNA** (§3, earned via codon matches, spent
+specifically on growing organisms) as the game's second and third
+resource types, covering everything DNA doesn't: floorplan, decor,
+convenience, and exclusives.
+
+- **Dew** (soft currency, earned in-game): a small watercolor droplet
+  icon — translucent blue-green wash, one of the easiest shapes to sell
+  convincingly in the watercolor shader (§10), with a gentle idle
+  breathing/shimmer animation. Earned from PCR Cycle completion bonuses
+  (§3), daily care streaks (watering plants, tending cats), and biome
+  milestone completions. Spent on floorplan expansions (§14), standard
+  furniture/decor/ambient music (§7), and hardscape pieces (§13) beyond
+  the free/procedural defaults.
+- **Amber** (hard/premium currency, purchase-only): a faceted resin-drop
+  icon rendered with a warm-toned variant of the glass/resin shader
+  (§10) — amber is literally fossilized tree resin famous for preserving
+  organic material, including ancient DNA, which makes it a thematically
+  loaded choice rather than a generic gem. A small embedded-silhouette
+  detail (a suspended leaf or strand speck) reinforces the theme.
+  **Cannot be earned through gameplay** — purchase-only, no in-game
+  path to acquire it, matching the "earn one, only buy the other" rule
+  directly and keeping the hard currency meaningful. Spent on PCR cycle
+  timer skips, exclusive/rare cosmetic variants (rare backdrop palettes
+  §12, rare cat personalities/breeds, exclusive amber-tier hardscape and
+  furniture), and optionally a "guaranteed rare" reroll on a codon-match
+  result — never on gating core content outright.
+- **Design principle**: the game's whole pitch is a relaxing, low-
+  pressure experience (§1), so Amber spend should stay limited to
+  convenience and cosmetic exclusives, never core progression gates —
+  no pay-to-win pressure on the puzzle itself, no timers aggressive
+  enough that skipping them feels mandatory. Worth treating as a hard
+  constraint on monetization design, not just a suggestion, since
+  violating it directly undercuts the game's core promise.
+
+## 16. Recommended Next Step
 
 Prototype the two riskiest, most novel pieces together rather than in
 isolation: a standalone L-system → voxel-grid → mesh generator for a
