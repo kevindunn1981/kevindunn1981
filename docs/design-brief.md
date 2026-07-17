@@ -148,9 +148,11 @@ puzzle meta-game and the generative art.
   wander, react to player taps, occasional unique "personality" barks/
   animations. Not simulation-heavy; can reuse existing idle-pet game
   patterns.
-- **Economy**: furniture/decor/ambient-music purchases, likely on a soft
-  currency earned via puzzle play plus optional IAP. Standard mobile
-  free-to-play shop pattern.
+- **Economy**: furniture/decor/ambient-music/**wall art** purchases,
+  spent in Dew (earned) with an optional Amber-tier layer for exclusives
+  — see §15 for the full currency and storefront model (single-purchase
+  base game, optional real-money extras with an in-game earn path for
+  everything).
 
 ## 8. Biggest Risks / Open Questions
 
@@ -191,6 +193,10 @@ puzzle meta-game and the generative art.
   values should be defined once as shared tokens so every procedurally
   decorated panel still reads as one consistent system rather than a
   pile of bespoke screens.
+- **Rendering**: menu chrome itself — not just the decorative flourishes
+  — is rendered in the watercolor/cel-on-paper style from §10, not a
+  separate flat UI skin. See §10's "Illustration & UI Surfaces" for the
+  full scope of where that style is used.
 
 ## 10. Art Direction: Watercolor / Cel-Shaded Hybrid
 
@@ -243,6 +249,36 @@ need their own treatment, while still reading as part of the same world:
   real alpha blending for glass — it sidesteps sort-order issues
   entirely, costs less on mobile, and the dither pattern reads as
   watercolor stippling rather than a technical compromise.
+
+### Illustration & UI Surfaces
+
+The watercolor/cel-on-paper style isn't only a 3D-scene shader — it's
+the game's native rendering language, and applies just as directly to
+flat 2D surfaces:
+
+- **Menu screens** (§9): panel backgrounds themselves, not just the
+  procedural decorative flourishes, render in this style.
+- **Storefront item illustrations**: the icons/cards shown when a player
+  is browsing or buying anything from the optional extras storefront
+  (§15) — Amber Inclusions, Catalyst Vials, Curator's Passes, Themed
+  Bundles — are painted in the same cel/watercolor-on-paper treatment,
+  so shopping never feels like a different, more "gamey" visual register
+  than the rest of the experience.
+- **Purchasable wall art**: a new decor category (alongside furniture,
+  backdrops, and hardscape) — framed paintings the player buys with Dew
+  (or via Themed Bundles) and hangs on room walls through the floorplan
+  system (§14), depicting biome scenes, specimen portraits, or abstract
+  nature motifs. These need no special justification for using the
+  watercolor/paper style — within the fiction they *are* paintings, so
+  reusing the game's native shader is the diegetically correct choice,
+  not just a consistent one.
+
+Since 2D illustration surfaces (menus, item cards, wall art) are static
+and don't need to react to a moving 3D light source the way voxel scenes
+do, they're also the cheapest possible place to prove out the
+paper/pigment/granulation half of the shader stack — worth prototyping
+this 2D illustration pipeline in parallel with, or even before, the full
+3D voxel shader from earlier in this section.
 
 ## 11. Audio Direction: Generative Ambient Score
 
