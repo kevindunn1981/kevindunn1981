@@ -214,6 +214,36 @@ puzzle meta-game and the generative art.
   with flat default shading tells you nothing about whether the final
   art style lands. See §11's updated recommendation.
 
+### Material-Specific Shaders: Wood & Glass
+
+The general voxel watercolor/cel shader above is tuned for organic,
+opaque, painted surfaces. Two materials behave differently enough to
+need their own treatment, while still reading as part of the same world:
+
+- **Wood** (driftwood/branch hardscape from §13, furniture/decor, PCR
+  machine trim): grain generated procedurally — a radial "growth ring"
+  gradient distorted by turbulence/fractal noise, the classic procedural
+  wood technique — rather than painted texture per piece, keeping wood
+  consistent with the game's "nothing is a static asset" philosophy. The
+  grain still passes through the same toon-banding + edge-darkening pass
+  as everything else, so it shows up as tonal/color variation within the
+  painted look rather than as a glossy, photoreal-PBR material that
+  would clash with the rest of the scene.
+- **Glass** (terrarium/tank walls, the PCR chamber lid from §3): reading
+  as "glass" in a watercolor world isn't the same problem as photoreal
+  glass. A few cel-banded specular highlights (not a full reflection
+  probe), Fresnel-driven edge brightening (glass reads more opaque/bright
+  at grazing silhouette edges, more transparent face-on — cheap on
+  mobile), and a light screen-space distortion standing in for refraction
+  should be enough to sell it without expensive real refraction.
+- **Transparency performance note**: true alpha-blended glass needs
+  back-to-front sort order, which gets expensive and glitchy fast once a
+  room has several tanks/terrariums visible at once (§12). Worth using a
+  stylized dithered/stippled transparency (screen-door style) instead of
+  real alpha blending for glass — it sidesteps sort-order issues
+  entirely, costs less on mobile, and the dither pattern reads as
+  watercolor stippling rather than a technical compromise.
+
 ## 11. Audio Direction: Generative Ambient Score
 
 - **Palette**: wind in trees, chimes, a quiet breeze across a field,
