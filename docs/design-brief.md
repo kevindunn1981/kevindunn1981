@@ -346,7 +346,47 @@ folded into "place a plant."
   harder to relocate once rooted, both thematically and technically), and
   worth supporting saved hardscape presets/templates the player can reuse.
 
-## 14. Recommended Next Step
+## 14. Floorplan Designer
+
+The room isn't one fixed space that just gets more crowded forever — it's
+a **modular floorplan** the player builds out over time, structurally
+separate from the cosmetic wallpaper/backdrop system (§12) and the
+furniture/decor economy (§7). This gives "the room slowly filling out"
+(§1) real spatial weight: progression naturally unlocks new rooms and
+expansions, and each biome tier can get a room genuinely suited to it,
+rather than every biome tier's contents piling into one increasingly
+cluttered space.
+
+- **Editing model**: a grid-based, top-down "build mode" (same lineage as
+  *The Sims*/*House Flipper*/mobile home-design games), toggled
+  separately from the normal 3D orbit "living view" (§3's swipe/pinch
+  camera language carries over once back in living view). Walls, doors,
+  and windows are modular pieces that snap to a grid rather than
+  freeform wall-drawing — keeps geometry/collision generation tractable
+  while still giving real layout freedom.
+- **Progression tie-in**: each biome tier unlock grants a themed
+  room/expansion module rather than just "more floor space" — e.g.
+  unlocking terrariums grants a sunroom-style module with more window
+  walls (suited to terrarium light), unlocking coral tanks grants a room
+  styled around a reef theme. New floor tiles/rooms cost currency from
+  the puzzle economy (§7), same as other unlocks — the floorplan itself
+  becomes a progression reward, not just a sandbox tool available from
+  the start.
+- **Windows tie into backdrops**: a window placed on an exterior wall
+  displays the layered procedural backdrop system from §12 rather than
+  needing bespoke window art per floorplan configuration — one more
+  place the generative backdrop system pays for itself twice.
+- **Validity rules**: standard floorplan-builder constraints — wall
+  segments align to the grid, and every room needs door connectivity
+  back to an entrance (a flood-fill reachability check, the same
+  technique sim-style building games use to prevent sealed/unreachable
+  rooms).
+- **Scale note**: this is house-scale, not open-world-scale, space — a
+  full floorplan of modular rooms stays comfortably within mobile
+  budget. Simple per-room occlusion (render only the current room plus
+  immediately adjacent ones) is enough; no streaming/LOD system needed.
+
+## 15. Recommended Next Step
 
 Prototype the two riskiest, most novel pieces together rather than in
 isolation: a standalone L-system → voxel-grid → mesh generator for a
