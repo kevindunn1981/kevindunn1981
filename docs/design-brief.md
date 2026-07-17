@@ -474,7 +474,54 @@ extras for those who choose to spend more.
   in-game earn path" as a hard constraint, since that's what keeps the
   storefront optional in practice and not just in name.
 
-## 16. Recommended Next Step
+## 16. Greenhouse & Specialty Growing
+
+Tropical plants (§4 Tier 1) aren't limited to pots inside the room — two
+more growing contexts round out that tier, one always available, one a
+later unlock that deepens Tier 1 rather than advancing past it.
+
+- **Display shelving**: tank/terrarium stands get shelves above and
+  below the container itself — a genuine piece of real aquarium-keeping
+  furniture (stands commonly have open shelving for extra tanks or
+  potted plants), and in-game a place to keep individually potted
+  tropical plants alongside whatever tank sits on that stand. This is
+  available from Tier 1 onward, placed and decorated through the same
+  furniture/floorplan systems as everything else (§7, §14).
+- **The Greenhouse**: a later-game unlockable room (through the
+  Floorplan Designer, §14) dedicated to specialty growing techniques —
+  a deliberate "go deeper into your first biome" unlock rather than only
+  ever pushing the player toward the next tier. Two specimen types
+  anchor it:
+  - **Orchids mounted on terracotta olla vessels** — ollas (unglazed
+    clay irrigation pots, traditionally buried to slow-release water to
+    roots) as the growing vessel instead of a generic pot. This
+    introduces a **terracotta/ceramic material**, worth a shader
+    treatment alongside wood and glass (§10): matte, warm orange-brown,
+    with subtle procedural "throwing lines" — concentric ridges from
+    wheel-throwing, generated the same way as wood's growth rings (a
+    radial gradient plus turbulence noise, just interpreted as
+    throwing-marks instead of grain) — and a rougher, more matte cel
+    band than glass or wood to read as unglazed fired clay. The olla
+    shape itself can be procedurally generated as a lathed/revolved
+    profile with small hand-thrown imperfections, rather than a single
+    fixed prop.
+  - **Staghorn ferns** — epiphytic, mounted rather than potted, with a
+    genuinely different growth form than the branching-tree L-system
+    used elsewhere: flat, layered "shield" fronds hugging the mount at
+    the base, plus antler-like fertile fronds fanning outward via
+    **dichotomous branching** (always splitting into exactly two, unlike
+    the variable branch counts used for trees/shrubs). This needs its
+    own generation ruleset rather than reusing the Tier 1 tree generator
+    from §5 as-is — worth treating as a second, distinct L-system grammar
+    for Tier 1 rather than a parameter variation of the first.
+- **Mounting mechanic reuse**: both the olla-mounted orchids and the
+  mounted staghorn ferns are instances of the attachment-point mechanic
+  already established in §13 ("moss and epiphytic plants bind to
+  rock/wood surfaces") — no new placement system needed, just more
+  surfaces (shelves, ollas, greenhouse mounting boards) that participate
+  in it.
+
+## 17. Recommended Next Step
 
 Prototype the two riskiest, most novel pieces together rather than in
 isolation: a standalone L-system → voxel-grid → mesh generator for a
