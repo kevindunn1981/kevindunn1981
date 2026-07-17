@@ -24,9 +24,11 @@ the whole room, at consistent visual fidelity.
 2. **Grow** — collected DNA is spent to generate a specimen (a plant
    species, tank type, or coral variant) procedurally as a voxel model,
    placed into the player's room/tank/terrarium. Growth may be animated
-   over real or accelerated time (sprouting, branching, polyp budding).
+   over real or accelerated time (sprouting, branching, polyp budding),
+   and doesn't stop there — see §19 for ongoing propagation.
 3. **Curate** — player arranges specimens, buys furniture/decor/ambient
-   music tracks, and tends to cats that accumulate in the room over time.
+   music tracks, prunes and sells or replants cuttings (§19), and tends
+   to cats that accumulate in the room over time.
 4. **Progress** — completing puzzle milestones unlocks the next biome
    tier and new puzzle mechanics/tile types themed to that tier.
 
@@ -636,7 +638,55 @@ painted, not placed piece by piece.
   surprise cutoff) so a satisfying, relaxing painting session doesn't
   quietly turn into an anxious cost-tracking exercise.
 
-## 19. Recommended Next Step
+## 19. Propagation, Pruning & Cuttings
+
+Specimens don't stop growing once placed. Over time — the natural
+"check back later" cadence relaxing/idle games already lean on, e.g.
+once per real-world day — an established specimen propagates within its
+container, spreading to fill in the biome the way §1 always described it
+("spontaneous looking virtual ecosystems") rather than sitting static
+after one growth animation completes.
+
+- **Not an invented mechanic — this matches real hobbyist practice
+  directly**, which is why it's worth building as a real system rather
+  than a throwaway feature: aquarists literally "frag" coral (cut/break
+  a fragment to grow a new colony), aquascapers trim and replant
+  stem-plant cuttings as routine maintenance, and houseplant keepers
+  propagate via runners, offsets, and cuttings. Each biome tier's
+  propagation should match its real-world analog rather than one generic
+  spread rule:
+  - **Tropical plants** — offsets/runners: a pup or stolon-derived clone
+    appears near the parent.
+  - **Terrarium/riparium/paludarium** mosses and small plants —
+    fragmentation/spread across available substrate.
+  - **Planted tanks** — stem-plant cuttings: a plant that grows tall
+    enough produces a "top" that can root as a new plant, matching real
+    aquascape trimming.
+  - **Coral** — fragging, the literal reef-keeping term: a mature coral
+    head can spawn a new frag on nearby open rock.
+- **Genome inheritance**: propagated offspring are near-clones of the
+  parent (same genome with minor jitter) rather than new random rolls —
+  vegetative propagation produces genetically identical or near-identical
+  offspring in reality, and it also gives a spreading biome visual
+  coherence (a colony reads as one related population, not a random
+  assortment).
+- **Constrained by hardscape/container space**: spread only fills open,
+  valid attachment points within the same container — reusing §13's
+  attachment-point mechanic rather than a new one — so a full tank or pot
+  naturally stops propagating until the player makes room. A soft,
+  self-regulating pace rather than needing an explicit spread-rate
+  limiter.
+- **Pruning**: the player actively trims overgrown parts — a direct,
+  satisfying maintenance interaction that fits the curator/gardener
+  fantasy from §1. Pruned material becomes a **cutting**.
+- **Cuttings — sell or replant**: a cutting can be sold for Dew (a new
+  earn path alongside PCR Cycle bonuses and care streaks, §15) or
+  replanted elsewhere in the room as a free new specimen instead of
+  being grown through the puzzle again — a real choice between cashing
+  out and expanding for free, using the same placement flow already
+  built for specimens generally.
+
+## 20. Recommended Next Step
 
 Prototype the two riskiest, most novel pieces together rather than in
 isolation: a standalone L-system → voxel-grid → mesh generator for a
