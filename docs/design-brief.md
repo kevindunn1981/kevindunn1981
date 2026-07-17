@@ -176,11 +176,82 @@ puzzle meta-game and the generative art.
    dozens/hundreds of unlockable specimens is a content-design problem as
    much as a tech problem.
 
-## 9. Recommended Next Step
+## 9. UI & Menu System
 
-Prototype the riskiest, most novel piece first: a standalone L-system →
-voxel-grid → mesh generator for a single biome (tropical plants), with
-tunable "genome" parameters, before building any puzzle-game or
-room/economy scaffolding. This validates both the visual bar ("does it
-look neat?") and the mobile meshing/performance approach before investing
-in the rest of the game's systems.
+- **Procedurally generated decoration, not procedurally generated
+  layout**: menu panels/screens use rounded-corner containers and clear
+  modern sans-serif typography as a stable, legible base — the
+  proceduralism goes into decorative flourishes framing that base (vine
+  growth around panel edges, small moss/coral accents that match
+  whichever biome tier is currently the player's focus), generated with
+  the same L-system engine used for plants. Decoration is seeded once
+  per screen/theme and cached, not regenerated per frame — the goal is
+  charm and variety between sessions, not jitter.
+- **Design-token discipline**: corner radius, spacing, and panel color
+  values should be defined once as shared tokens so every procedurally
+  decorated panel still reads as one consistent system rather than a
+  pile of bespoke screens.
+
+## 10. Art Direction: Watercolor / Cel-Shaded Hybrid
+
+- **Goal**: the voxel scene should read as *painted*, not rendered — a
+  cel-shaded (quantized toon lighting) base combined with watercolor-style
+  post effects (pigment/edge darkening at silhouette edges, noise-driven
+  alpha granulation) composited onto a paper background — cold-pressed
+  watercolor paper for a rougher, toothier feel, or mulberry paper for a
+  softer, fibrous, more translucent feel, chosen per biome/mood.
+- **Feasible as a shader stack**: (1) toon banding on lit voxel faces,
+  (2) Fresnel/edge-detection pass for pigment-edge darkening, (3)
+  noise-driven alpha variation for granulation, (4) multiply/overlay
+  blend against a paper texture (optionally with a paper normal map so
+  lighting subtly interacts with the paper's tooth). This is genuine
+  shader R&D, not a simple reskin, but it's well-precedented (games like
+  *Dordogne*, *GRIS*, and *Okami*'s ink-brush styling solve adjacent
+  problems) and achievable on mobile as a single lean pass.
+- **Prioritization note**: this is arguably as risky/novel as the
+  L-system generator itself, since "does this look neat" depends
+  entirely on the shader — a technically correct L-system plant rendered
+  with flat default shading tells you nothing about whether the final
+  art style lands. See §11's updated recommendation.
+
+## 11. Audio Direction: Generative Ambient Score
+
+- **Palette**: wind in trees, chimes, a quiet breeze across a field,
+  Native American and Asian (shakuhachi/dizi-style) flute. These share a
+  **pentatonic** scale foundation, which is a genuinely useful
+  coincidence: generating melodies restricted to a pentatonic scale is a
+  well-known generative-music technique (Eno/Chilvers-style generative
+  ambient apps like *Bloom*) precisely because pentatonic intervals are
+  hard to make sound "wrong" — it's what makes procedural composition
+  tractable without a dedicated composer curating every output.
+- **Layered generative system**:
+  - *Chime layer* — stochastic (Poisson-timed) note triggers on bell/
+    chime timbres, mimicking real wind chimes' irregular triggering.
+  - *Flute layer* — breathy, sample-based (or lightly physically
+    modeled) pitched phrases with occasional pitch bends/vibrato,
+    sparse and slow.
+  - *Breeze/field bed* — filtered, slowly amplitude-modulated noise as
+    a continuous low bed under the other two layers.
+- **Same pattern as the rest of the game**: tie generation parameters to
+  game state (biome tiers unlocked so far, room fullness, time of day)
+  so the score subtly evolves with progress rather than looping a fixed
+  track.
+- **Thematic/technical throughline**: L-systems (already the core plant
+  generator) have real prior art in algorithmic music composition —
+  symbols can map to notes/rhythms instead of geometry. Worth reusing
+  the same L-system engine for melodic phrase generation rather than
+  building an unrelated system from scratch.
+
+## 12. Recommended Next Step
+
+Prototype the two riskiest, most novel pieces together rather than in
+isolation: a standalone L-system → voxel-grid → mesh generator for a
+single biome (tropical plants), rendered through a first pass of the
+watercolor/cel shader from §10, with tunable "genome" parameters — before
+building any puzzle-game or room/economy scaffolding. Geometry and shader
+have to be judged together, since "does it look neat" is a property of
+the combination, not either piece alone; a correct L-system plant in flat
+shading and a great shader on a boring shape are both dead ends on their
+own. This validates the visual bar, the mobile meshing/performance
+approach, and the shader's mobile cost all at once, before investing in
+the rest of the game's systems.
