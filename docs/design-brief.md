@@ -242,7 +242,81 @@ puzzle meta-game and the generative art.
   the same L-system engine for melodic phrase generation rather than
   building an unrelated system from scratch.
 
-## 12. Recommended Next Step
+## 12. Biome Backdrops
+
+Two separate backdrop layers, not one: **(a)** the room's own walls/
+windows (a decor/economy purchase, §7), and **(b)** each individual
+container's (pot/terrarium/tank) internal backdrop — matching how real
+aquarists and terrarium-keepers actually stage backgrounds behind their
+setups.
+
+Rather than commissioning one static painting per biome, backdrops are
+**layered 2D parallax matte paintings**: a gradient sky/water base +
+noise-generated silhouette layers (mountains, canopy, cloud/mist) +
+optional foreground blur, run through the same watercolor/cel shader
+pass as the 3D scene (§10) so the backdrop and the specimens in front of
+it read as one consistent painting rather than a 3D model glued onto a
+flat photo.
+
+Starting point per biome:
+- **Tropical plants** — soft interior wall / blurred window-garden view.
+- **Terrarium** — solid-color or soft gradient backing, consistent with
+  how real terrariums are staged (foam-board style backgrounds).
+- **Riparium** — blurred wetland horizon, muted greens/browns.
+- **Paludarium** — jungle canopy silhouette, mist layer, occasional
+  waterfall haze.
+- **Planted tank** — gradient blue/green depth backdrop (mirrors real
+  planted-tank background sheets), subtle light-ray shafts.
+- **Coral tank** — deep blue-to-black gradient with animated caustic
+  light shimmer.
+
+**Procedural variation instead of more hand-painted assets**: time-of-day
+and mood variants (dawn, dusk, overcast, etc.) are regenerations of the
+same layered system (gradient stops + noise seed changed), not separate
+art assets. This is what gets sold/unlocked as backdrop variety in the
+economy system (§7) — real variety without a linear art-asset cost.
+
+## 13. Hardscape Build Workflow
+
+"Hardscape" (aquascaping term) is the inert structural layer — rock,
+driftwood/branches, substrate — placed *before* living specimens,
+forming the composition's backbone. Real aquascaping is built around this
+step, so it deserves its own dedicated build mode rather than being
+folded into "place a plant."
+
+- **Palette**: hardscape pieces are procedurally generated, not a fixed
+  prop catalog — rocks via fractured/Worley-noise voxel shapes across a
+  few families (e.g. layered "seiryu-style" stone, rounded river rock),
+  driftwood/branches via the same L-system branching skeletons used for
+  plants (unleaved, wood-textured). This gives hardscape the same
+  "always unique" quality as the living content.
+- **Placement tool**: freeform drag/rotate/scale within the container's
+  voxel volume, reusing the puzzle's camera language (swipe to orbit,
+  pinch to zoom, §3) for consistency, with an optional grid-snap toggle
+  for players who want precision over freeform.
+- **Composition aids**, gamifying real aquascaping guidance rather than
+  just explaining it in text: a toggleable rule-of-thirds/golden-ratio
+  overlay grid, a soft focal-point highlight, and a live height-gradient
+  hint (taller hardscape toward the back/sides, open space and lower
+  material toward the front, for a sense of depth) — presented as gentle
+  visual guides, not hard constraints, in keeping with the relaxing tone.
+- **Auto-arrange option**: a one-tap procedural layout generator for
+  players who don't want to hand-place every rock — a constraint-based
+  placement pass (avoid overlap, favor odd-numbered groupings per the
+  classic aquascaping "rule of odds," height gradient front-to-back) that
+  the player can then hand-tweak rather than starting from a blank tank.
+- **Planting integration**: once hardscape is placed, it defines *where*
+  subsequently grown organisms are allowed to root/attach — moss and
+  epiphytic plants bind to rock/wood surfaces, substrate-rooted plants go
+  in open substrate pockets, coral frags mount onto rock faces. Hardscape
+  placement isn't just decorative — it's the scaffold the procedural
+  growth systems (§5) attach to.
+- **Save/undo**: hardscape layouts should be freely undoable/swappable
+  before living specimens attach to them (since grown organisms are
+  harder to relocate once rooted, both thematically and technically), and
+  worth supporting saved hardscape presets/templates the player can reuse.
+
+## 14. Recommended Next Step
 
 Prototype the two riskiest, most novel pieces together rather than in
 isolation: a standalone L-system → voxel-grid → mesh generator for a
