@@ -588,7 +588,55 @@ This resolves the open fork flagged in the foliage prototype's README
 is both, as two backends sharing one generation pipeline, not a single
 either/or decision.
 
-## 18. Recommended Next Step
+## 18. Moss Brush & Card-Based Ground Cover
+
+A dedicated painting tool for dense moss coverage on hardscape (§13) —
+rocks, driftwood, substrate — distinct from the discrete "place one
+generated object" pattern used everywhere else in the game. Coverage is
+painted, not placed piece by piece.
+
+- **Interaction**: a brush cursor the player drags across hardscape
+  surfaces to paint moss density/coverage directly, similar to
+  texture-painting tools (Blender's texture paint mode, terrain-painting
+  tools in game engines). Brush size and a currently-selected moss
+  variety are the only controls needed — real-time visual feedback as
+  coverage builds keeps it feeling immediate and relaxing rather than
+  menu-driven, in keeping with §1's tone.
+- **Purchasable moss varieties**: multiple moss types, each with its own
+  color/texture character, available through the same Dew/Amber/extras-
+  storefront structure as everything else (§15) — the collection grows
+  over time rather than every variety being available immediately.
+- **Rendering technique — a deliberate exception to "nothing is a static
+  asset"**: moss coverage uses pre-authored alpha-cutout card sprites
+  (crossed/billboarded quads — the standard technique for dense
+  small-scale ground cover in real-time rendering, the same basic idea
+  as grass cards in nearly any 3D game) rather than per-tuft procedural
+  geometry. This is the right call specifically *because* moss is dense
+  fill decoration where painting feel matters far more than per-tuft
+  uniqueness, unlike the structural specimens (plants, coral, hardscape)
+  where per-instance proceduralism is the whole point. Proceduralism
+  still happens, just at a different layer: the brush controls placement
+  density, rotation jitter, and per-stroke color-tint variation across
+  card instances, rather than generating unique tuft geometry.
+- **Watercolor consistency**: since these are pre-authored card textures
+  rather than runtime-shaded geometry, the watercolor/cel look (edge
+  darkening, granulation, paper interaction, §10) gets painted directly
+  into the card art itself at authoring time, rather than computed by
+  the real-time shader — simpler than applying the procedural shader
+  stack to alpha-cutout edges, and consistent with treating card art as
+  a small, deliberately hand-authored exception within an otherwise
+  fully procedural world.
+- **Currency mechanic — spend while painting, not per-item**: unlike
+  every other purchase in the game (buy once, place once), the moss
+  brush consumes Dew continuously as the player paints, scaled to
+  coverage/density rather than a flat per-item price. This is a
+  different spending shape worth checking explicitly against §15's
+  design principle (never let spending feel pressured) — needs a visible
+  "how much more can I paint" indicator (a running Dew countdown, not a
+  surprise cutoff) so a satisfying, relaxing painting session doesn't
+  quietly turn into an anxious cost-tracking exercise.
+
+## 19. Recommended Next Step
 
 Prototype the two riskiest, most novel pieces together rather than in
 isolation: a standalone L-system → voxel-grid → mesh generator for a
