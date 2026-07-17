@@ -59,13 +59,15 @@ anything:
 
 ## Known gaps / next steps
 
-- No voxelization step yet — this emits a triangle mesh directly rather
-  than going through the voxel-grid intermediate described in
-  `docs/design-brief.md` §6 (voxel storage) and
-  `docs/voxel-format-research.md`. Worth deciding whether the final
-  pipeline voxelizes this mesh, or generates directly into a voxel grid
-  and meshes via greedy meshing instead (blockier, more "voxel game"
-  silhouette vs. this smoother tube-based look).
+- No voxelization step yet. Per `docs/design-brief.md` §17, this direct
+  tube-mesh output is meant to become one of *two* render-style
+  backends ("low-poly") sharing a common generated skeleton, with a
+  second backend ("voxel") rasterizing that same skeleton into the
+  bricked sparse voxel grid from §6 and greedy-meshing it. Right now
+  `grow()` in `lsystem_foliage.py` builds mesh geometry directly instead
+  of emitting an intermediate skeleton the two backends could share —
+  worth refactoring so skeleton generation and meshing are separate
+  steps before adding the voxel backend.
 - Leaf shape is a single fixed diamond card — no per-species leaf shape
   variation yet.
 - No watercolor/cel shader applied — flat Bark/Leaf materials only.

@@ -549,7 +549,46 @@ later unlock that deepens Tier 1 rather than advancing past it.
   (shelves, ollas, mounting boards, the water garden basin) that
   participate in it.
 
-## 17. Recommended Next Step
+## 17. Render Style: Low-Poly or Voxel
+
+Every specimen generator (L-system trees, cellular-automata terrariums,
+space-colonization aquatic plants, reaction-diffusion coral, the
+dichotomous-branching staghorn grammar from §16) produces a shared
+intermediate: a **skeleton** — positions, radii, and connectivity —
+independent of how it's finally meshed. That separation means the same
+genome and the same generated skeleton can feed two different meshing
+backends, so the player gets to choose a rendering style rather than the
+game committing to one look:
+
+- **Low-poly mode**: direct tube meshing — tapered hex-tube branches and
+  faceted leaf/frond cards, as already prototyped in
+  `prototypes/lsystem-foliage/`. Smoother, more organic silhouette while
+  still reading as deliberately faceted rather than photoreal.
+- **Voxel mode**: the skeleton is rasterized into the bricked sparse
+  voxel grid from §6, then greedy-meshed — blocky, axis-aligned, the
+  game's original core identity ("the entire game will be voxels," §1).
+
+Both paths converge on the same watercolor/cel shader from §10 — that
+shader operates on lighting bands, silhouette edges, and paper
+compositing, all independent of the underlying mesh topology, so it
+applies to either render style without needing two separate shader
+implementations. Good validation of keeping generation, meshing, and
+shading as separate pipeline stages rather than one monolithic step.
+
+**Player-facing**: a global style setting is the right default (with a
+per-room override worth considering later via the Floorplan Designer,
+§14, since different rooms could reasonably want different moods),
+rather than a per-specimen toggle that would just be micromanagement.
+Cheap to support either way: switching style re-meshes already-generated
+skeleton/genome data rather than regenerating content from scratch, so
+it's a one-time rebake, not an ongoing performance cost.
+
+This resolves the open fork flagged in the foliage prototype's README
+(voxelize the mesh vs. generate directly into a voxel grid) — the answer
+is both, as two backends sharing one generation pipeline, not a single
+either/or decision.
+
+## 18. Recommended Next Step
 
 Prototype the two riskiest, most novel pieces together rather than in
 isolation: a standalone L-system → voxel-grid → mesh generator for a
