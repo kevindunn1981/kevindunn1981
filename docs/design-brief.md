@@ -388,47 +388,55 @@ cluttered space.
 
 ## 15. Currency System: Dew & Amber
 
-**Business model: single upfront purchase.** No free-to-play loop, no
-real-money IAP, no storefront, no live-ops economy tuning. That removes
-the exact tension the original dual-currency design existed to manage
-(earnable soft currency vs. purchase-only hard currency), so Dew and
-Amber both become **in-game-only resources**, differentiated by scarcity
-rather than by how they're acquired. They sit alongside **DNA** (§3,
-earned via codon matches, spent specifically on growing organisms) as
-the game's second and third resource types, covering everything DNA
-doesn't: floorplan, decor, convenience, and exclusives.
+**Business model**: a single one-time purchase on Google Play unlocks
+**full access to the entire core game** — every biome tier, the complete
+PCR Cycle puzzle, and the full floorplan/hardscape/decor systems are all
+reachable through ordinary play, no exceptions. On top of that base
+purchase, an **optional extras storefront** exists for players who want
+more — it never gates core content, only adds cosmetic/convenience
+extras for those who choose to spend more.
 
-- **Dew** (common, earned constantly): a small watercolor droplet icon —
-  translucent blue-green wash, one of the easiest shapes to sell
-  convincingly in the watercolor shader (§10), with a gentle idle
-  breathing/shimmer animation. Earned from PCR Cycle completion bonuses
-  (§3), daily care streaks (watering plants, tending cats), and biome
-  milestone completions. Spent on floorplan expansions (§14), everyday
-  furniture/decor/ambient music (§7), and hardscape pieces (§13) beyond
-  the free/procedural defaults.
-- **Amber** (rare, earned occasionally): a faceted resin-drop icon
-  rendered with a warm-toned variant of the glass/resin shader (§10) —
-  amber is literally fossilized tree resin famous for preserving organic
-  material, including ancient DNA, which makes it thematically loaded
-  rather than a generic gem. A small embedded-silhouette detail (a
-  suspended leaf or strand speck) reinforces the theme. Earned from
-  standout play — a particularly clean codon match, a milestone
-  completion, an occasional rare puzzle drop — **never purchased**, since
-  there's no store to purchase it from. Spent on rare cosmetic variants
-  (rare backdrop palettes §12, rare cat personalities/breeds, exclusive
-  hardscape and furniture families) — a collection/scarcity reward layer,
-  not a monetization layer. The earlier "Amber Inclusions"/"Catalyst
-  Vials" item ideas still work well reframed as **earned rare drops**
-  rather than purchased items — "you found a preserved specimen" reads
-  better as a rare reward than as a store SKU anyway.
+- **Dew** (common, earned in-game, never sold): a small watercolor
+  droplet icon — translucent blue-green wash, one of the easiest shapes
+  to sell convincingly in the watercolor shader (§10), with a gentle
+  idle breathing/shimmer animation. Earned from PCR Cycle completion
+  bonuses (§3), daily care streaks (watering plants, tending cats), and
+  biome milestone completions. Spent on floorplan expansions (§14),
+  everyday furniture/decor/ambient music (§7), and hardscape pieces
+  (§13) — the full version of all of these is reachable with Dew alone,
+  as part of the base game.
+- **Amber** (rare — earnable in-game *or* purchasable): a faceted
+  resin-drop icon rendered with a warm-toned variant of the glass/resin
+  shader (§10) — amber is literally fossilized tree resin famous for
+  preserving organic material, including ancient DNA, which makes it
+  thematically loaded rather than a generic gem. A small embedded-
+  silhouette detail (a suspended leaf or strand speck) reinforces the
+  theme. Earned in modest amounts from standout play (a particularly
+  clean codon match, a milestone completion, an occasional rare puzzle
+  drop) — this earn path alone is enough to eventually reach every
+  Amber-tier item, just more slowly. Spent on rare cosmetic variants:
+  rare backdrop palettes (§12), rare cat personalities/breeds, and
+  exclusive hardscape/furniture families.
+- **Optional extras storefront** (real money, entirely skippable): the
+  item ideas from our earlier pass — **Amber Inclusions** (a specific
+  named rare specimen/mutation, framed as a preserved-curio purchase),
+  **Catalyst Vials** (instantly complete a PCR cycle in progress),
+  **Curator's Passes** (unlock a specific exclusive hardscape/furniture
+  family outright), and **Themed Bundles** (curated decor/backdrop/music
+  packs) — sold directly for real money as a faster or more curated path
+  to the same Amber-tier content that patient play already reaches for
+  free. Nothing sold here is exclusive to purchase only; everything has
+  an in-game earn path too, so the storefront is a convenience/support
+  option, not a paywall.
 - **Design principle**: the game's whole pitch is a relaxing, low-
-  pressure experience (§1). With no purchases beyond the initial one,
-  there's no pay-to-win concern and no upsell pressure by construction —
-  Dew and Amber exist purely to pace progression and give the "curator"
-  fantasy some scarcity/collection texture, not to manage a monetization
-  funnel. This is a cleaner fit for §1's pitch than any version of the
-  IAP model was, and it meaningfully simplifies scope: no storefront UI,
-  no payment-item balancing, no economy tuning required for launch.
+  pressure experience (§1). Because the one-time purchase already grants
+  full access to everything needed to completely play and progress, the
+  optional storefront can be generous and low-pressure by construction —
+  it exists for players who enjoy spending a little more to support the
+  game or skip ahead, not to manage a monetization funnel players feel
+  pushed into. Worth treating "every purchasable item also has an
+  in-game earn path" as a hard constraint, since that's what keeps the
+  storefront optional in practice and not just in name.
 
 ## 16. Recommended Next Step
 
