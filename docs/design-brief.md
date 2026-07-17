@@ -388,42 +388,47 @@ cluttered space.
 
 ## 15. Currency System: Dew & Amber
 
-A two-tier currency — one earnable, one purchase-only — matching the
-classic soft/hard-currency free-to-play pattern, but themed and rendered
-to fit the rest of the game rather than generic coin/gem iconography.
-This sits alongside **DNA** (§3, earned via codon matches, spent
-specifically on growing organisms) as the game's second and third
-resource types, covering everything DNA doesn't: floorplan, decor,
-convenience, and exclusives.
+**Business model: single upfront purchase.** No free-to-play loop, no
+real-money IAP, no storefront, no live-ops economy tuning. That removes
+the exact tension the original dual-currency design existed to manage
+(earnable soft currency vs. purchase-only hard currency), so Dew and
+Amber both become **in-game-only resources**, differentiated by scarcity
+rather than by how they're acquired. They sit alongside **DNA** (§3,
+earned via codon matches, spent specifically on growing organisms) as
+the game's second and third resource types, covering everything DNA
+doesn't: floorplan, decor, convenience, and exclusives.
 
-- **Dew** (soft currency, earned in-game): a small watercolor droplet
-  icon — translucent blue-green wash, one of the easiest shapes to sell
+- **Dew** (common, earned constantly): a small watercolor droplet icon —
+  translucent blue-green wash, one of the easiest shapes to sell
   convincingly in the watercolor shader (§10), with a gentle idle
   breathing/shimmer animation. Earned from PCR Cycle completion bonuses
   (§3), daily care streaks (watering plants, tending cats), and biome
-  milestone completions. Spent on floorplan expansions (§14), standard
+  milestone completions. Spent on floorplan expansions (§14), everyday
   furniture/decor/ambient music (§7), and hardscape pieces (§13) beyond
   the free/procedural defaults.
-- **Amber** (hard/premium currency, purchase-only): a faceted resin-drop
-  icon rendered with a warm-toned variant of the glass/resin shader
-  (§10) — amber is literally fossilized tree resin famous for preserving
-  organic material, including ancient DNA, which makes it a thematically
-  loaded choice rather than a generic gem. A small embedded-silhouette
-  detail (a suspended leaf or strand speck) reinforces the theme.
-  **Cannot be earned through gameplay** — purchase-only, no in-game
-  path to acquire it, matching the "earn one, only buy the other" rule
-  directly and keeping the hard currency meaningful. Spent on PCR cycle
-  timer skips, exclusive/rare cosmetic variants (rare backdrop palettes
-  §12, rare cat personalities/breeds, exclusive amber-tier hardscape and
-  furniture), and optionally a "guaranteed rare" reroll on a codon-match
-  result — never on gating core content outright.
+- **Amber** (rare, earned occasionally): a faceted resin-drop icon
+  rendered with a warm-toned variant of the glass/resin shader (§10) —
+  amber is literally fossilized tree resin famous for preserving organic
+  material, including ancient DNA, which makes it thematically loaded
+  rather than a generic gem. A small embedded-silhouette detail (a
+  suspended leaf or strand speck) reinforces the theme. Earned from
+  standout play — a particularly clean codon match, a milestone
+  completion, an occasional rare puzzle drop — **never purchased**, since
+  there's no store to purchase it from. Spent on rare cosmetic variants
+  (rare backdrop palettes §12, rare cat personalities/breeds, exclusive
+  hardscape and furniture families) — a collection/scarcity reward layer,
+  not a monetization layer. The earlier "Amber Inclusions"/"Catalyst
+  Vials" item ideas still work well reframed as **earned rare drops**
+  rather than purchased items — "you found a preserved specimen" reads
+  better as a rare reward than as a store SKU anyway.
 - **Design principle**: the game's whole pitch is a relaxing, low-
-  pressure experience (§1), so Amber spend should stay limited to
-  convenience and cosmetic exclusives, never core progression gates —
-  no pay-to-win pressure on the puzzle itself, no timers aggressive
-  enough that skipping them feels mandatory. Worth treating as a hard
-  constraint on monetization design, not just a suggestion, since
-  violating it directly undercuts the game's core promise.
+  pressure experience (§1). With no purchases beyond the initial one,
+  there's no pay-to-win concern and no upsell pressure by construction —
+  Dew and Amber exist purely to pace progression and give the "curator"
+  fantasy some scarcity/collection texture, not to manage a monetization
+  funnel. This is a cleaner fit for §1's pitch than any version of the
+  IAP model was, and it meaningfully simplifies scope: no storefront UI,
+  no payment-item balancing, no economy tuning required for launch.
 
 ## 16. Recommended Next Step
 
