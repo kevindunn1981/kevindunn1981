@@ -490,8 +490,9 @@ later unlock that deepens Tier 1 rather than advancing past it.
 - **The Greenhouse**: a later-game unlockable room (through the
   Floorplan Designer, §14) dedicated to specialty growing techniques —
   a deliberate "go deeper into your first biome" unlock rather than only
-  ever pushing the player toward the next tier. Two specimen types
-  anchor it:
+  ever pushing the player toward the next tier. Four specimen types
+  anchor it, roughly in unlock order, with the last two as the
+  Greenhouse's capstone content:
   - **Orchids mounted on terracotta olla vessels** — ollas (unglazed
     clay irrigation pots, traditionally buried to slow-release water to
     roots) as the growing vessel instead of a generic pot. This
@@ -514,12 +515,39 @@ later unlock that deepens Tier 1 rather than advancing past it.
     own generation ruleset rather than reusing the Tier 1 tree generator
     from §5 as-is — worth treating as a second, distinct L-system grammar
     for Tier 1 rather than a parameter variation of the first.
-- **Mounting mechanic reuse**: both the olla-mounted orchids and the
-  mounted staghorn ferns are instances of the attachment-point mechanic
-  already established in §13 ("moss and epiphytic plants bind to
-  rock/wood surfaces") — no new placement system needed, just more
-  surfaces (shelves, ollas, greenhouse mounting boards) that participate
-  in it.
+  - **Japanese water garden in an XL jar/basin** — a large ceramic
+    basin (mizubachi/suiban-style) housing a self-contained miniature
+    aquatic garden: water lilies or lotus pads, iris, floating duckweed.
+    Structurally this is a small-scale preview of the Planted Tank tier's
+    space-colonization aquatic-plant generator (§4 Tier 5, §5) run at
+    jar scale rather than a new algorithm — which is really the point of
+    the Greenhouse: its specialty items double as miniature previews of
+    later-tier techniques (orchids/staghorns already reuse the
+    attachment mechanic from §13; this reuses the aquatic-plant
+    algorithm), giving Tier 1 genuine late-game depth instead of just
+    more of what it started with. The jar itself extends the
+    terracotta/ceramic material with a **glazed** variant — glossy,
+    optionally crackle-textured — giving that material real range
+    (unglazed olla vs. glazed basin) rather than one fixed look.
+  - **Bonsai trees** — a natural fit for the existing L-system tree
+    generator (§5): classical bonsai styles (formal/informal upright,
+    slanting, cascade, windswept, literati) map directly onto genome
+    parameters the generator already exposes (branch angle, branch
+    count, trunk-continuation chance). Worth noting the
+    `windswept-bonsai` preset already shipped in
+    `prototypes/lsystem-foliage/` validates this fit directly — no new
+    generation technique needed, just genome tuning. Grown in a shallow
+    bonsai pot/tray, a third application of the ceramic material family.
+    A player-driven pruning/training mechanic (rather than pure
+    procedural generation) is worth keeping in mind as a future addition
+    for this specimen specifically, but isn't core scope given §8's
+    scope risk already flagged.
+- **Mounting mechanic reuse**: the olla-mounted orchids and mounted
+  staghorn ferns are instances of the attachment-point mechanic already
+  established in §13 ("moss and epiphytic plants bind to rock/wood
+  surfaces") — no new placement system needed, just more surfaces
+  (shelves, ollas, mounting boards, the water garden basin) that
+  participate in it.
 
 ## 17. Recommended Next Step
 
